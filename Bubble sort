@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+int main()
+{
+   int n,a,b,i,j,k,temp=0,l;
+   printf("enter n value:");
+   scanf("%d",&n);
+   printf("enter %d numbers:",n );
+   int arr[n];
+   for(i=0;i<n;i++)
+      scanf("%d",&arr[i]);
+   for(j=0;j<n-1;j++)
+   {
+      for(k=0;k<n-1-j;k++)
+      {
+         if(arr[k]>arr[k+1])
+         {
+         temp=arr[k];
+         arr[k]=arr[k+1];
+         arr[k+1]=temp;
+         }
+      }
+   }   
+   for(l=0;l<n;l++)
+   printf("%d ",arr[l]);
+}
