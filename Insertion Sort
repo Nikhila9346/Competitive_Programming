@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int main()
+{
+   int n,i,j,k,x,l;
+   printf("enter n value:");
+   scanf("%d",&n);
+   printf("enter %d numbers:",n );
+   int arr[n];
+   for(i=0;i<n;i++)
+      scanf("%d",&arr[i]);
+      for(j=1;j<n;j++)
+      {
+         k=j-1;
+         x=arr[j];
+         while(k>-1 && arr[k]>x)
+         {
+            arr[k+1]=arr[k];
+            k--;
+         }
+         arr[k+1]=x;
+      }
+      for(l=0;l<n;l++)
+      printf("%d ",arr[l]);
+}
